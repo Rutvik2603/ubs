@@ -85,16 +85,16 @@ document.getElementById('verifyDateBtn').addEventListener("click",function(){
 	document.getElementById('otpSection').classList.remove("d-none");
 });
 
-// const boxes= document.querySelectorAll(".otp-box");
+const boxes= document.querySelectorAll(".otp-box");
 
-// boxes.forEach(function (box,i)=>{
-// 	box.oninput=()=>{
-// 		if(box.value && i<5)
-// 		{
-// 			boxes[i+1].focus();
-// 		}
-// 	};
-// });
+ boxes.forEach(function (box,i)=>{
+	box.oninput=()=>{
+		if(box.value && i<5)
+		{
+			boxes[i+1].focus();
+		}
+	};
+});
 
 document.getElementById('verifyOtpBtn').onclick=function(){
 	let boxes=document.querySelectorAll(".otp-box");
